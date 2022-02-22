@@ -1,0 +1,37 @@
+.card-container {
+  transition: box-shadow 200ms;
+  z-index: 1;
+}
+
+.card-container:hover {
+  box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-container.is-dragging {
+  box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list-container {
+  max-height: calc(100vh - 150px);
+}
+
+.list-container::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  color: red;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.top-box-shadow {
+  background: linear-gradient(
+    rgba(222, 222, 222, 1),
+    rgba(222, 222, 222, 0.001)
+  ); /* transparent keyword is broken in Safari */
+}
+
+.bottom-box-shadow {
+  background: linear-gradient(
+    rgba(222, 222, 222, 0.001),
+    rgba(222, 222, 222, 1)
+  ); /* transparent keyword is broken in Safari */
+}
