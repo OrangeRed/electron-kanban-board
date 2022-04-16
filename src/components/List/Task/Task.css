@@ -1,0 +1,15 @@
+.task {
+  z-index: 1;
+  width: 270px;
+  user-select: none;
+  margin-bottom: 10px;
+  transition: box-shadow 200ms;
+}
+
+.task:hover {
+  box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task.is-dragging {
+  box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.1);
+}
