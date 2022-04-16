@@ -4,30 +4,9 @@ import { v4 as uuidv4 } from "uuid"
 import Column from "./components/Column"
 import { KanbanItem, KanbanList } from "./types"
 
-import "./App.css"
+import { KanbanBoard } from "./types"
 
-const testColItems: KanbanItem[] = [
-  {
-    id: uuidv4(),
-    title: "🔹 Solar Exchange ",
-    content: "Create Solar Exchange UI",
-  },
-  {
-    id: uuidv4(),
-    title: "🔹 Learn Formik",
-    content: "Simple Formik project ( . . . )",
-  },
-  {
-    id: uuidv4(),
-    title: "🔺 EP-1855",
-    content: "Add totals/averages to the bottom of energy dashboard table",
-  },
-  {
-    id: uuidv4(),
-    title: "🔺 EP-1855",
-    content: "Add totals/averages to the bottom of energy dashboard table",
-  },
-]
+import { testLists } from "./test"
 
 const testCols: KanbanList = {
   [uuidv4()]: {
@@ -53,7 +32,7 @@ const testCols: KanbanList = {
  *  5) Make columns draggable
  */
 
-const onDragEnd = (result: DropResult, columns: KanbanList): KanbanList => {
+const onDragEnd = (result: DropResult, columns: KanbanBoard): KanbanBoard => {
   if (!result?.destination) return columns
   const { source, destination } = result
   const srcColumn = columns[source.droppableId]

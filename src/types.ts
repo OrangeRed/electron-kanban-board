@@ -1,14 +1,12 @@
-export type KanbanItem = {
+export type KanbanTask = {
   id: string
   title: string
   content?: string
 }
 
-export type KanbanColumn = {
+export type KanbanList = {
   title: string
-  items: KanbanItem[]
+  items: KanbanTask[]
 }
 
-export type KanbanList = {
-  [key: string]: KanbanColumn
-}
+export type KanbanBoard = Record<string, KanbanList>
