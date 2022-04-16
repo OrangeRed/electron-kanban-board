@@ -1,0 +1,37 @@
+.list-container {
+  height: 100%;
+  margin: 8px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #fefefe;
+}
+
+.top-box-shadow {
+  height: 10px;
+  margin-bottom: -5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #dedede;
+}
+
+.task-container {
+  max-height: calc(100vh - 150px);
+  padding: 10px 5px 5px 5px;
+  min-height: 200px;
+  min-width: 270px;
+}
+
+.bottom-box-shadow {
+  height: 10px;
+  margin-top: -5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #dedede;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding-top: 4px;
+}
