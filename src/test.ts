@@ -45,7 +45,7 @@ export const testTasks: KanbanTask[] = [
   },
 ]
 
-export const testLists: KanbanBoard = {
+export const testBoard: KanbanBoard = {
   [uuidv4()]: {
     title: "To Do",
     items: testTasks,
