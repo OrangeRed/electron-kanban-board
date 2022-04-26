@@ -1494,6 +1494,11 @@
     react-popper "^2.2.5"
     react-textarea-autosize "^8.3.2"
 
+"@mantine/form@^4.1.5":
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/@mantine/form/-/form-4.1.5.tgz#5fb851c5a9f7ca89a34680155eea52ac541220a1"
+  integrity sha512-9Dl9pe4KD+qGi0qHms8VssvUMjLLhmJV3AQGm9C3PmiH8Cm+S9x6oHKD3grNbnSQLOsTymWKW9/kxvfU1BMeBg==
+
 "@mantine/hooks@^4.1.3":
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-4.1.3.tgz#5deb782689ce2a90e7276d1454ad660385ceb6cf"
