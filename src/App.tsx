@@ -6,7 +6,6 @@ import "./App.css"
 import { testBoard } from "./test"
 
 /** TODO LIST
- *  1) Add Modal with markdown for tasks
  *  2) Implement button to make new task
  *  3) Implement ability to edit tasks
  *  4) Add sidebar with following buttons
