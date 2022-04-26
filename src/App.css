@@ -22,7 +22,7 @@
   background-color: #dedede;
 }
 
-.task-container {
+.list-body {
   max-height: calc(100vh - 150px);
   padding: 10px 5px 5px 5px;
   min-height: 200px;
@@ -44,11 +44,15 @@
   padding-top: 4px;
 }
 
+.task-container {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
 .task {
   z-index: 1;
   width: 270px;
   user-select: none;
-  margin-bottom: 10px;
   transition: box-shadow 200ms;
 }
 
@@ -58,4 +62,32 @@
 
 .task.is-dragging {
   box-shadow: 0 0 18px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-button {
+  background-color: transparent;
+}
+
+.action-button:hover {
+  background-color: #c1c2c5;
+}
+
+.task-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.editing {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.preview {
+  background-color: transparent;
+  border: none;
+}
+
+.preview:hover {
+  background-color: rgb(235, 236, 240);
+  transition: 300ms;
 }
