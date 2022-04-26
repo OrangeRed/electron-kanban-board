@@ -1,12 +1,12 @@
+// Imports
 import React from "react"
-import { IconPlus } from "@tabler/icons"
+import { Container } from "@mantine/core"
 import { DragDropContext } from "react-beautiful-dnd"
-import { Text, ScrollArea, ActionIcon, Container } from "@mantine/core"
-
-import Lists from "./Lists"
-
+// Types
 import type { DropResult } from "react-beautiful-dnd"
 import type { KanbanBoard } from "../types"
+// Components
+import List from "./List"
 
 const onDragEnd = (result: DropResult, board: KanbanBoard): KanbanBoard => {
   if (!result?.destination) return board
@@ -55,36 +55,8 @@ const Board: React.FC<{
   return (
     <Container className="board-container" fluid={true}>
       <DragDropContext onDragEnd={(result) => setBoard(onDragEnd(result, board))}>
-        {Object.entries(board).map(([listId, listItems]) => (
-          <Container className="list-container">
-            <Container className="list-head" fluid={true}>
-              <Text size="xl">{listItems.title}</Text>
-              <Text size="sm" color="dimmed">
-                {`${listItems.items.length} ${listItems.items.length === 1 ? "Task" : "Task"}`}
-              </Text>
-            </Container>
-
-            <div className="top-box-shadow" />
-
-            <ScrollArea
-              type="hover"
-              scrollHideDelay={100}
-              styles={{
-                root: { background: "#dedede" },
-                scrollbar: { zIndex: 1 },
-              }}
-            >
-              <Lists listId={listId} listItems={listItems} />
-            </ScrollArea>
-
-            <div className="bottom-box-shadow" />
-
-            <Container className="button-container" fluid={true}>
-              <ActionIcon variant="filled">
-                <IconPlus />
-              </ActionIcon>
-            </Container>
-          </Container>
+        {Object.entries(board).map(([listId, list]) => (
+          <List key={listId} listId={listId} list={list} />
         ))}
       </DragDropContext>
     </Container>
